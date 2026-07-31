@@ -1,0 +1,15 @@
+{
+  "name": "Only You",
+  "short_name": "Only You",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#100d13",
+  "theme_color": "#17131b",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

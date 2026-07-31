@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#17131b" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Only You" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Only You</title>
+</head>
+<body>
+  <main id="app">
+    <section id="title-screen" class="screen active">
+      <div class="title-wrap">
+        <p class="eyebrow">A procedural psychological romance</p>
+        <h1>Only You</h1>
+        <p class="tagline">Every playthrough remembers a different version of her.</p>
+        <button id="new-game" class="primary">Begin</button>
+        <button id="continue-game" class="secondary hidden">Continue</button>
+      </div>
+    </section>
+
+    <section id="setup-screen" class="screen">
+      <div class="panel setup-panel">
+        <p class="eyebrow">New Game</p>
+        <h2>Who are you?</h2>
+        <label>
+          Your name
+          <input id="player-name" maxlength="18" autocomplete="off" placeholder="Frenzy" />
+        </label>
+        <label>
+          Difficulty
+          <select id="difficulty">
+            <option value="story">Story</option>
+            <option value="normal" selected>Normal</option>
+            <option value="uneasy">Uneasy</option>
+          </select>
+        </label>
+        <p class="fine-print">Exact relationship values and hidden motives remain concealed.</p>
+        <button id="start-game" class="primary">Start Day One</button>
+        <button id="back-title" class="secondary">Back</button>
+      </div>
+    </section>
+
+    <section id="game-screen" class="screen">
+      <header class="game-header">
+        <div>
+          <span id="day-label">Day 1</span>
+          <strong id="location-label">Campus Café</strong>
+        </div>
+        <button id="menu-button" class="icon-button" aria-label="Open menu">•••</button>
+      </header>
+
+      <div id="scene-art" class="scene-art">
+        <div id="portrait" class="portrait">E</div>
+        <div class="grain"></div>
+      </div>
+
+      <section class="dialogue-panel">
+        <div id="speaker" class="speaker"></div>
+        <div id="story-text" class="story-text"></div>
+        <div id="choices" class="choices"></div>
+      </section>
+    </section>
+
+    <section id="ending-screen" class="screen">
+      <div class="panel ending-panel">
+        <p class="eyebrow">Playthrough Complete</p>
+        <h2 id="ending-title"></h2>
+        <p id="ending-text"></p>
+        <div id="ending-clues" class="ending-clues"></div>
+        <button id="play-again" class="primary">Begin Another Story</button>
+        <button id="ending-title-button" class="secondary">Title Screen</button>
+      </div>
+    </section>
+
+    <div id="menu-modal" class="modal hidden">
+      <div class="modal-card">
+        <h3>Pause</h3>
+        <button id="save-button" class="primary">Save Game</button>
+        <button id="restart-button" class="secondary">Restart Run</button>
+        <button id="close-menu" class="secondary">Return</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
